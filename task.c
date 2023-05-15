@@ -5,25 +5,25 @@
 #include <stdlib.h>
 #include <pthread.h>
 
-int a, b, sum, sub, mul, div;
+int a, b;
 
 void* addition(void* thread_id){
-    sum = a + b;
+    int sum = a + b;
     printf("Sum: %d\n", sum);
 }
 
 void* subtraction(void* thread_id){
-    sub = a - b;
+    int sub = a - b;
     printf("Subtraction: %d\n", sub);
 }
 
 void* multiplication(void* thread_id){
-    mul = a * b;
+    int mul = a * b;
     printf("Multiplication: %d\n", mul);
 }
 
 void* division(void* thread_id){
-    div = a / b;
+    int div = a / b;
     printf("Division: %d\n", div);
 }
 
